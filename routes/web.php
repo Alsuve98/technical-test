@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
+    return redirect()->route('cars.index');
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
